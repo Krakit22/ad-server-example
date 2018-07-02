@@ -47,7 +47,6 @@ public class CampaignControllerTest extends AbstractWebIntegrationTest {
 
     @Test
     public void delete() throws Exception {
-        ObjectMapper mapper = new ObjectMapper();
         mockMvc.perform(MockMvcRequestBuilders.delete("/campaign/2")
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().is(HttpStatus.OK.value()));

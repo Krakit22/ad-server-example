@@ -49,8 +49,7 @@ public class PlacementControllerTest extends AbstractWebIntegrationTest {
 
     @Test
     public void delete() throws Exception {
-        ObjectMapper mapper = new ObjectMapper();
-        mockMvc.perform(MockMvcRequestBuilders.delete("/placement/2")
+        mockMvc.perform(MockMvcRequestBuilders.delete("/placement/3")
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().is(HttpStatus.OK.value()));
     }

@@ -1,14 +1,14 @@
-package com.cot.service;
+package com.cot.service.impl;
 
 import com.cot.base.AbstractIntegrationTest;
 import com.cot.domain.Placement;
 import com.cot.exception.EntityNotFoundException;
+import com.cot.service.PlacementService;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
 
 public class PlacementServiceTest extends AbstractIntegrationTest {
 
@@ -38,8 +38,7 @@ public class PlacementServiceTest extends AbstractIntegrationTest {
 
     @Test(expected = EntityNotFoundException.class)
     public void testDelete() {
-        placementService.delete(1L);
-        Placement placement = placementService.findById(1L);
-        assertNull(placement);
+        placementService.delete(3L);
+        placementService.findById(3L);
     }
 }

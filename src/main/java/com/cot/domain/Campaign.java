@@ -23,12 +23,14 @@ public class Campaign {
     private String name;
 
     @Column
-    private Byte weight;
+    private Integer weight;
 
     @Column(name="advertising_phrase")
     private String advertisingPhrase;
 
-    @OneToMany(fetch = FetchType.EAGER)
-    @JoinColumn(name = "campaign_id")
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "campaign_to_placement",
+            joinColumns = {@JoinColumn(name = "campaign_id")},
+            inverseJoinColumns = {@JoinColumn(name = "placement_id")})
     private Set<Placement> placements;
 }

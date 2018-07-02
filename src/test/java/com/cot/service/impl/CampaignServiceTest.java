@@ -1,8 +1,9 @@
-package com.cot.service;
+package com.cot.service.impl;
 
 import com.cot.base.AbstractIntegrationTest;
 import com.cot.domain.Campaign;
 import com.cot.exception.EntityNotFoundException;
+import com.cot.service.CampaignService;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
