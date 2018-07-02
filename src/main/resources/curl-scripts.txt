@@ -1,0 +1,6 @@
+curl -X POST http://localhost:8080/placement -H 'Content-Type: application/json' -d '{"name":"Main Placement"}'
+curl -X POST http://localhost:8080/campaign -H 'Content-Type: application/json' -d '{"name": "GM_campaign", "weight": 30, "advertisingPhrase": "Buy our car", "placements": [{"id": 1}]}'
+curl -X POST http://localhost:8080/campaign -H 'Content-Type: application/json' -d '{"name": "Ferrari_campaign", "weight": 20, "advertisingPhrase": "Buy our sportcat", "placements": [{"id": 1}]}'
+curl -X POST http://localhost:8080/campaign -H 'Content-Type: application/json' -d '{"name": "Apple_campaign", "weight": 40, "advertisingPhrase": "Buy our mobile", "placements": [{"id": 1}]}'
+curl -X POST http://localhost:8080/campaign -H 'Content-Type: application/json' -d '{"name": "Google_campaign", "weight": 60, "advertisingPhrase": "Buy our glasses", "placements": [{"id": 1}]}'
+curl -X POST http://localhost:8080/campaign -H 'Content-Type: application/json' -d '{"name": "Oracle_campaign", "weight": 40, "advertisingPhrase": "Buy our DB", "placements": [{"id": 1}]}'
