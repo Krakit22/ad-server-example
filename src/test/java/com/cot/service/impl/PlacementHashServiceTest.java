@@ -16,7 +16,8 @@ public class PlacementHashServiceTest extends AbstractIntegrationTest {
 
     @Test
     public void testFindById() {
-        PlacementHash placementHash = placementHashService.findById(1L);
+        placementHashService.save(PlacementHash.builder().id(999L).name("placement_test").build());
+        PlacementHash placementHash = placementHashService.findById(999L);
 
         assertNotNull(placementHash);
         assertEquals(placementHash.getName(), "placement_test");

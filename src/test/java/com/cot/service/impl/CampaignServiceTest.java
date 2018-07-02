@@ -20,6 +20,8 @@ public class CampaignServiceTest extends AbstractIntegrationTest {
 
         assertNotNull(campaign);
         assertEquals(campaign.getName(), "campaign_test");
+        assertNotNull(campaign.getPlacements());
+        assertTrue(!campaign.getPlacements().isEmpty());
     }
 
     @Test

@@ -5,7 +5,6 @@ import com.cot.inmemory.model.CampaignHash;
 import com.cot.inmemory.model.PlacementHash;
 import com.cot.inmemory.service.AdvertisingService;
 import com.cot.inmemory.service.PlacementHashService;
-import com.google.common.annotations.VisibleForTesting;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -27,7 +26,6 @@ public class AdvertisingServiceImpl implements AdvertisingService {
                 .orElseThrow(() -> new PlacementNotContainCampaignException(placementId)).getAdvertisingPhrase();
     }
 
-    @VisibleForTesting
     protected Optional<CampaignHash> chooseOnWeight(Set<CampaignHash> campaignHashes) {
         if (Objects.nonNull(campaignHashes) && !campaignHashes.isEmpty()) {
             long completeWeight = campaignHashes.stream().collect(Collectors.summarizingInt(CampaignHash::getWeight)).getSum();

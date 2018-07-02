@@ -3,6 +3,7 @@ package com.cot.inmemory.model;
 import com.cot.domain.Campaign;
 import com.cot.domain.Placement;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -14,6 +15,7 @@ import java.util.stream.Collectors;
 
 @Getter
 @Setter
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @RedisHash("PlacementHash")
