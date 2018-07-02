@@ -2,8 +2,8 @@ package com.cot.repository;
 
 import com.cot.domain.Placement;
 import org.springframework.data.repository.CrudRepository;
-import org.springframework.data.rest.core.annotation.RepositoryRestResource;
+import org.springframework.stereotype.Repository;
 
-@RepositoryRestResource(collectionResourceRel = "placement", path = "placement")
+@Repository
 public interface PlacementRepository extends CrudRepository<Placement, Long> {
 }
